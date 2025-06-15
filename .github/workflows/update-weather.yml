@@ -33,6 +33,6 @@ jobs:
           echo "Nada para commitar"
         else
           git commit -m "Atualizar clima automaticamente"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:master
+          git push origin HEAD:${{ github.ref_name }}
 
         fi
